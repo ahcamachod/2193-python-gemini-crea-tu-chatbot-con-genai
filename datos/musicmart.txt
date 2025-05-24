@@ -1,0 +1,119 @@
+## Datos de MusiMart
+
+**Nombre del E-commerce:** MusiMart
+
+**Eslogan:** "Música para todos los estilos"
+
+**Descripción del E-commerce:** MusiMart es una plataforma de comercio electrónico especializada en instrumentos musicales y accesorios, enfocada en ofrecer productos de alta calidad para músicos de todos los niveles. Creemos que la música tiene el poder de transformar vidas, y nuestra misión es hacer que los instrumentos musicales sean accesibles para todos, desde principiantes hasta profesionales.
+
+## Políticas de MusiMart
+
+1. **Política de Devolución:**
+
+   * MusiMart ofrece una política de devolución de 30 días para todos los instrumentos no utilizados y en perfectas condiciones.
+   * Los costos de envío por devolución corren por cuenta del cliente, a menos que el producto haya llegado defectuoso o dañado.
+   * Los reembolsos se procesarán después de la inspección del producto devuelto y pueden emitirse como crédito en la tienda o mediante el método de pago original, según la preferencia del cliente.
+
+2. **Política de Privacidad:**
+
+   * Respetamos tu privacidad y estamos comprometidos con la protección de tu información personal.
+   * La información recopilada durante el proceso de compra, como nombre, dirección e información de pago, se utiliza únicamente para procesar pedidos y comunicarnos con los clientes.
+   * No compartimos tu información con terceros sin tu consentimiento.
+
+3. **Seguridad:**
+
+   * Utilizamos tecnología de encriptación de datos (SSL) para garantizar que toda la información de pago se transmita de forma segura.
+   * Mantenemos estrictas medidas de seguridad para proteger nuestra base de datos y evitar accesos no autorizados.
+
+4. **Calidad y Garantía:**
+
+   * En MusiMart, todos los productos son cuidadosamente seleccionados para garantizar la mejor experiencia musical.
+   * Ofrecemos garantía extendida para instrumentos de cuerda, teclados y baterías, cubriendo defectos de fabricación por hasta 2 años.
+   * Trabajamos solo con marcas reconocidas en el mercado, asegurando la calidad de los productos.
+
+5. **Atención al Cliente:**
+
+   * Nuestro equipo de atención al cliente está disponible a través de chat en vivo y correo electrónico ([musimart@aluralatam.com](mailto:musimart@aluralatam.com)) para ayudar con preguntas, inquietudes y asistencia en las compras.
+   * Estamos comprometidos en brindar una atención rápida y eficaz para garantizar la satisfacción de los clientes.
+
+6. **Entrega y Plazos de Envío:**
+
+   * Informamos los plazos de entrega estimados al momento de la compra.
+   * Trabajamos con transportadoras confiables para garantizar la entrega segura y puntual de los instrumentos musicales.
+   * Si hay retrasos inesperados en la entrega, informamos de inmediato a los clientes y buscamos soluciones alternativas siempre que sea posible.
+
+7. **Responsabilidad Social:**
+
+   * MusiMart apoya iniciativas que fomentan la enseñanza de música en comunidades vulnerables.
+   * Contribuimos con un porcentaje de las ventas a proyectos de educación musical y proporcionamos instrumentos a escuelas y organizaciones sociales.
+
+8. **Opiniones y Comentarios:**
+
+   * Animamos a los clientes a dejar opiniones y comentarios sobre los productos para ayudar a otros músicos a tomar decisiones informadas.
+
+9. **Descuentos y Promociones:**
+
+   * Instrumentos de cuerda tienen 10% de descuento con el cupón `CUPON_CUERDAS`, válido hasta el 25/11/2025.
+   * Teclados y sintetizadores tienen 15% de descuento con el cupón `CUPON_TECLAS`, válido hasta el 25/10/2025.
+   * Baterías y percusión tienen 10% de descuento con el cupón `CUPON_BATERIA`, válido hasta el 25/12/2025.
+   * Amplificadores tienen 10% de descuento con el cupón `CUPON_AMP`, válido hasta el 25/10/2025.
+
+MusiMart se esfuerza por ser la plataforma de referencia para músicos, ofreciendo instrumentos musicales de alta calidad y accesorios que ayudan a los clientes a mejorar sus habilidades y a expresar su creatividad.
+
+## Productos Disponibles
+
+1. **Instrumentos de Cuerda:** Guitarras acústicas, eléctricas, bajos y accesorios.
+
+   * Guitarra Acústica Nylon Harmonicus NX40: \$ 799,00
+   * Guitarra Eléctrica Sunburst Stinger Pro: \$ 6.500,00
+   * Bajo Eléctrico Stratis Nova Bass 4: \$ 2.300,00
+   * Funda Acolchada para Guitarra ThunderCase: \$ 160,00
+   * Cuerdas para Guitarra HarmonyTone Classic (Nylon): \$ 50,00
+
+2. **Teclados y Pianos:** Instrumentos para tecladistas, desde principiantes hasta profesionales.
+
+   * Piano Digital Virtuoso PX-250: \$ 5.500,00
+   * Teclado Portátil MelodyKey 6100: \$ 1.100,00
+   * Sintetizador EchoSynth A7: \$ 6.200,00
+   * Pedal de Sustain SoundStep Classic: \$ 300,00
+   * Auriculares ClearTone Studio Pro: \$ 590,00
+
+3. **Baterías y Percusión:** Baterías acústicas y electrónicas, además de instrumentos de percusión variados.
+
+   * Batería Acústica ThunderBeat Pro: \$ 3.800,00
+   * Batería Electrónica PulseKit E-100: \$ 4.600,00
+   * Cajón Ritmo Vibe FLC-4603: \$ 420,00
+   * Platillo Titan Crash 16": \$ 1.900,00
+   * Baquetas SonicStrike Pro 5A: \$ 80,00
+
+4. **Accesorios para Música:** Equipamiento esencial para músicos de todos los estilos.
+
+   * Afinador Digital TuneMaster X5: \$ 120,00
+   * Atril para Partituras SheetPro Flex: \$ 85,00
+   * Cejuela Capotraste RiffClamp Trigger: \$ 180,00
+   * Púas FastPick Classic (0.73 mm): \$ 25,00 (paquete con 12)
+   * Pedal de Efecto SonicDrive Distortion X1: \$ 600,00
+
+5. **Equipos de Sonido:** Soluciones de audio para grabación y presentaciones.
+
+   * Amplificador para Guitarra RockTone GX15: \$ 1.600,00
+   * Consola de Sonido SoundMatrix 802: \$ 700,00
+   * Micrófono de Condensador ClearVoice AT2020: \$ 750,00
+   * Interfaz de Audio SonicTrack 2i2 Pro: \$ 1.400,00
+   * Monitor de Estudio BassCore RP5 G4: \$ 2.000,00 (cada uno)
+
+6. **Libros y Educación Musical:** Recursos educativos para músicos y entusiastas de la música.
+
+   * Método de Guitarra GuitarMaster Principiantes: \$ 60,00
+   * Partituras Legends of Rock – Edición Completa: \$ 450,00
+   * Libro "Armonía y Teoría Musical – Guía Completa": \$ 90,00
+   * DVD de Clases de Batería con Juan Souza (Ritmos de Brasil): \$ 40,00
+   * Material Educativo para Niños – Notas Divertidas: \$ 70,00
+
+7. **Software y Tecnología Musical:** Herramientas digitales para composición y producción musical.
+
+   * Software de Grabación SoundForge Studio: \$ 650,00
+   * Plugin de Efecto TonePro CLA-2A: \$ 450,00
+   * Controlador MIDI BeatMaster MK3: \$ 950,00
+   * Sampler SonicPulse Kontakt 6: \$ 2.400,00
+   * Software de Aprendizaje Musical MusicaAssist Pro: \$ 800,00 (suscripción anual)
