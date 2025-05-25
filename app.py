@@ -6,6 +6,8 @@ from time import sleep
 from utils import carga, guarda
 from personas import personas, seleccionar_persona
 from gestion_historial import eliminar_mensajes_antiguos
+import uuid
+from gestion_imagen import generar_imagen_gemini
 
 load_dotenv()
 
@@ -17,6 +19,9 @@ app = Flask(__name__)
 app.secret_key = 'aluralatam'
 
 contexto = carga("datos/musicmart.txt")
+
+camino_imagen_enviada = None
+upload_folder = "imagenes_temporales"
 
 def crear_chatbot():
     personalidad = "neutro"
@@ -59,6 +64,8 @@ def bot(prompt):
     #número máximo de intentos 
     max_intentos = 1
     repeticion = 0
+    global camino_imagen_enviada    
+
     while True:
         try:
             personalidad = personas[seleccionar_persona(prompt)]
@@ -69,7 +76,15 @@ def bot(prompt):
                                  Responde al mensaje siguiente, siempre recordando el historial:
                                  {prompt}
                                """
-            respuesta = chatbot.send_message(mensaje_usuario)
+            if camino_imagen_enviada:
+                mensaje_usuario += '\n Utiliza las características de la imagen en tu respuesta.'        
+                archivo_imagen = generar_imagen_gemini(camino_imagen_enviada)
+                respuesta = chatbot.send_message([archivo_imagen, mensaje_usuario]) 
+                camino_imagen_enviada = None
+            
+            else:
+                respuesta = chatbot.send_message(mensaje_usuario)
+
             if len(chatbot.history) > 4:
                 chatbot.history = eliminar_mensajes_antiguos(chatbot.history)
             print(f'Cantidad de mensajes: {len(chatbot.history)}\n{chatbot.history}') 
@@ -80,6 +95,19 @@ def bot(prompt):
             if repeticion >= max_intentos:
                 return "Error con Gemini: %s" % e
             sleep(50)
+
+@app.route("/cargar_imagen",methods=['POST'])
+def cargar_imagen():
+    global camino_imagen_enviada
+
+    if "imagen" in request.files:
+        imagen_enviada = request.files['imagen']
+        nombre_archivo = str(uuid.uuid4()) + os.path.splitext(imagen_enviada.filename)[1]
+        camino_archivo = os.path.join(upload_folder,nombre_archivo)
+        imagen_enviada.save(camino_archivo)
+        camino_imagen_enviada = camino_archivo
+        return 'Imagen enviada con éxito', 200
+    return 'Ningún archivo enviado', 400
 
 @app.route("/chat", methods=["POST"]) #Estamos creando la ruta hacia el endpoint /chat que va a invocar el metodo POST 
 def chat():
