@@ -44,6 +44,10 @@ async function enviarMensaje() {
     let mensaje = input.value;
     input.value = "";
 
+    if(miniaturaImagen){
+        miniaturaImagen.remove();
+    }
+
     let nuevaBurbuja = creaBurbujaUsuario();
     nuevaBurbuja.innerHTML = mensaje;
     chat.appendChild(nuevaBurbuja);
@@ -51,7 +55,15 @@ async function enviarMensaje() {
     let nuevaBurbujaBot = creaBurbujaBot();
     chat.appendChild(nuevaBurbujaBot);
     irParaFinalDelChat();
-    nuevaBurbujaBot.innerHTML = "Analizando ..."
+    nuevaBurbujaBot.innerHTML = "Analizando"
+
+    let estados = ['Analizando .','Analizando ..','Analizando ...','Analizando .'] //Añadimos una animación
+    let indiceEstado = 0;
+
+    let intervaloAnimacion = setInterval(() => {
+        nuevaBurbujaBot.innerHTML = estados[indiceEstado];
+        indiceEstado = (indiceEstado + 1) % estados.length;
+    },500);
     
     // Enviar la solicitud con el mensaje para la API del ChatBot
     const respuesta = await fetch("http://127.0.0.1:5000/chat", {
@@ -63,6 +75,9 @@ async function enviarMensaje() {
     });
     const textoDeRespuesta = await respuesta.text();
     console.log(textoDeRespuesta);
+
+    clearInterval(intervaloAnimacion);
+
     nuevaBurbujaBot.innerHTML = textoDeRespuesta.replace(/\n/g, '<br>');
     irParaFinalDelChat();
 }
