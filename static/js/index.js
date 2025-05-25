@@ -1,6 +1,43 @@
 let chat = document.querySelector('#chat');
 let input = document.querySelector('#input');
 let botonEnviar = document.querySelector('#boton-enviar');
+let imagenSeleccionada;
+let botonAdjunto = document.querySelector('#mas_archivo'); // Buscamos el botón con su ID
+let miniaturaImagen;
+
+async function tomarImagen(){
+    let fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*';
+    fileInput.onchange = async e=>{
+        //garantizar que tomamos la imagen que cargamos
+        if(miniaturaImagen){
+            miniaturaImagen.remove();
+        }
+        imagenSeleccionada = e.target.files[0];
+
+        miniaturaImagen = document.createElement('img');
+        miniaturaImagen.src = URL.createObjectURL(imagenSeleccionada);
+        miniaturaImagen.style.maxWidth = '3rem'; //16 pixeles x 3
+        miniaturaImagen.style.maxHeight = '3rem';
+        miniaturaImagen.style.margin = '0.5rem'; 
+
+        document.querySelector('.entrada__container').insertBefore(miniaturaImagen, input);  
+
+        let formData = new FormData();
+        formData.append('imagen', imagenSeleccionada);
+
+        const response = await fetch('http://127.0.0.1:5000/cargar_imagen', {
+            method: 'POST',
+            body: formData
+        });
+
+        const respuesta = await response.text();
+        console.log(respuesta);
+        console.log(imagenSeleccionada);
+    }
+    fileInput.click();
+}
 
 async function enviarMensaje() {
     if(input.value == "" || input.value == null) return;
@@ -53,3 +90,5 @@ input.addEventListener("keyup", function(event) {
         botonEnviar.click();
     }
 });
+
+botonAdjunto.addEventListener('click',tomarImagen);
